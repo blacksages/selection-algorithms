@@ -1,0 +1,54 @@
+\documentclass[a4paper, 10pt, oneside]{article}
+\usepackage[utf8]{inputenc}
+
+\title{Structure des données et algorithmes \\ Projet 1 :   Algorithmes de séléction}
+\author{LU Benoît - NOE Samuel }
+\date{Mars 2022}
+
+\begin{document}
+
+\maketitle
+
+\section{Analyse théorique}
+\subsection{Justification des complexités}
+\subsection{Complexité temporelle moyenne de Quickselect}
+
+\section{Expérimentations}
+\subsection{Temps de calcul pour la médiane}
+
+Pour ce point et le suivant, nous avons créé un programme écrit en \textit{Python} qui lance plusiseurs fois le programme de test et calcule la moyenne.
+
+
+\begin{table}[!h]
+\begin{tabular}{|l|lllllllll|}
+\hline
+Type de liste       & \multicolumn{3}{l}{Aléatoire}                                                              & \multicolumn{3}{l}{Croissante}                                        & \multicolumn{3}{l|}{Décroissante}                                     \\ \hline
+Taille              & \multicolumn{1}{l|}{$10^4$} & $10^5$ & $10^6$ & $10^4$ & $10^5$ & $10^6$ & $10^4$ & $10^5$ & $10^6$ \\ \hline
+SELECT BY QUICKSORT & \multicolumn{1}{l|}{}                      & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} &                       \\
+SELECT BY HEAPSORT  & \multicolumn{1}{l|}{}                      & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} &                       \\
+QUICKSELECT         & \multicolumn{1}{l|}{}                      & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} &                       \\
+MEDIAN OF MEDIANS   & \multicolumn{1}{l|}{}                      & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} &                       \\ \hline
+\end{tabular}
+\end{table}
+
+
+\subsection{Temps de calcul pour le dixième centile}
+
+
+
+
+\begin{table}[!h]
+\begin{tabular}{|l|lllllllll|}
+\hline
+Type de liste       & \multicolumn{3}{l}{Aléatoire}                                                              & \multicolumn{3}{l}{Croissante}                                        & \multicolumn{3}{l|}{Décroissante}                                     \\ \hline
+Taille              & \multicolumn{1}{l|}{$10^4$} & $10^5$ & $10^6$ & $10^4$ & $10^5$ & $10^6$ & $10^4$ & $10^5$ & $10^6$ \\ \hline
+SELECT BY QUICKSORT & \multicolumn{1}{l|}{}                      & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} &                       \\
+SELECT BY HEAPSORT  & \multicolumn{1}{l|}{}                      & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} &                       \\
+QUICKSELECT         & \multicolumn{1}{l|}{}                      & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} &                       \\
+MEDIAN OF MEDIANS   & \multicolumn{1}{l|}{}                      & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} &                       \\ \hline
+\end{tabular}
+\end{table}
+
+\subsection{Sous-questions}
+
+\end{document}
