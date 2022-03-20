@@ -51,7 +51,7 @@ selectquick[0] = selectquick[0] / RUNS
 selectquick[1] = selectquick[1] / RUNS
 selectquick[2] = selectquick[2] / RUNS
 
-print(median)
-print(quickselect)
-print(selectheap)
-print(selectquick)
+print("Medians of medians :" + median)
+print("Quickselect :" + quickselect)
+print("Select by heapsort :" + selectheap)
+print("Select by quicksort :" + selectquick)
