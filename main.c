@@ -5,7 +5,7 @@
 #include "Select.h"
 
 static const size_t ARRAY_LENGTH = 10000;
-static const size_t ELEMENT_IDX = ARRAY_LENGTH/10;
+static const size_t ELEMENT_IDX =   ARRAY_LENGTH / 10;
 
 /* Prototypes */
 
@@ -59,14 +59,16 @@ static void basicTest() {
  * ------------------------------------------------------------------------- */
 int main(void)
 {
+    int *result = fopen("result.txt", "a");
     basicTest();
     srand(time(NULL));//Use an integer seed to get a fix sequence
 
+    /*
     printf("Times to find element %zu for arrays of size %zu\n", ELEMENT_IDX, ARRAY_LENGTH);
     printf("-----------------------------\n");
     printf("Array type | Sorting time [s]\n");
     printf("-----------------------------\n");
-
+    */
     // ---------------------------- Sorted array ---------------------------- //
     int* sorted = createSortedArray(ARRAY_LENGTH);
     if (!sorted)
@@ -76,7 +78,8 @@ int main(void)
     }
 
     double sec = cpuTimeUsedToSelect(sorted, ARRAY_LENGTH, ELEMENT_IDX);
-    printf("Sorted     | %f\n", sec);
+    fprintf(result, "%f ",sec );
+    //printf("Sorted     | %f\n", sec);
     free(sorted);
 
     // -------------------------- Decreasing array -------------------------- //
@@ -88,7 +91,8 @@ int main(void)
     }
 
     sec = cpuTimeUsedToSelect(decreasing, ARRAY_LENGTH, ELEMENT_IDX);
-    printf("Decreasing | %f\n", sec);
+    fprintf(result, "%f ",sec );
+    //printf("Decreasing | %f\n", sec);
     free(decreasing);
 
     // ---------------------------- Random array ---------------------------- //
@@ -100,10 +104,13 @@ int main(void)
     }
 
     sec = cpuTimeUsedToSelect(random, ARRAY_LENGTH, ELEMENT_IDX);
-    printf("Random     | %f\n", sec);
+    fprintf(result, "%f ",sec );
+    //printf("Random     | %f\n", sec);
     free(random);
 
-    printf("-----------------------------\n");
+    //fprintf(result, "\n" );
+    fclose(result);
+    //printf("-----------------------------\n");
 
     return EXIT_SUCCESS;
 }
