@@ -4,7 +4,6 @@
  * ========================================================================= */
 
 #include <stddef.h>
-#include <stdio.h>
 #include "Select.h"
 
 static void _heap_sort(int* array, size_t length);
