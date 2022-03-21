@@ -32,17 +32,17 @@ static int partition(int *array, int p, int r){
 /*
 
 */
-static void quickselect(int *array, int p, int r, int k){
+static int quickselect(int *array, int p, int r, int k){
   if(p < r){
     int q = partition(array, p, r);
-    if(k <= q){
+    if(k == q){
+      return array[q];
+    }
+    if(k < q){
       //Left
       quickselect(array, p, q - 1, k);
     }
-    if(k == q + 1){
-      return;
-    }
-    else{
+    if(k > q){
       //Right
       quickselect(array, q + 1, r, k);
     }
@@ -51,6 +51,5 @@ static void quickselect(int *array, int p, int r, int k){
 
 int select(int* array, size_t length, size_t k)
 {
-    quickselect(array, 0, length - 1, k);
-    return array[k];
+    return quickselect(array, 0, length - 1, k);
 }
